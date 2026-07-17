@@ -1,0 +1,30 @@
+{
+  "name": "genpark-otari-llm-throttler-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Otari LLM execution gatekeeper.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "throttling",
+    "infra",
+    "otari"
+  ],
+  "inputs": {
+    "stream_latency_ms": {
+      "type": "integer"
+    },
+    "error_rate": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "throttle_action": {
+      "type": "string"
+    },
+    "fallback_active": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
